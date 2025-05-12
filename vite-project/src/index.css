@@ -1,0 +1,227 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ---------------------------------------------------------------------- */
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #c5c4c4;
+  transition: 0.25s;
+}
+a:hover {
+  color: #f7f7f7;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#login-btns {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px;
+  margin-top: 30px;
+  row-gap: 15px;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.7em 1.2em;
+  font-family: inherit;
+  font-weight: 600;
+  color: #0e0e0e;
+  background-color: #a5a5a5;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+button:hover {
+  border: 1px solid #242424aa;
+  background-color: #c5c4c4;
+}
+#gh-btn button {
+  width: 100%;
+  color: #f7f7f7;
+  background-color: #213547;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+#gh-btn button:hover {
+  border: 1px solid #535bf28a;
+}
+
+.other-login-btns {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2%;
+}
+.other-login-btns button {
+  width: 49%;
+  color: #242424;
+  font-size: 0.75em;
+  font-weight: 700;
+  background-color: #a5a5a5;
+}
+.other-login-btns button:hover {
+  background-color: #c5c4c4;
+}
+
+#user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#user-info img {
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+#user-info img:hover {
+  scale: 1.01;
+}
+#user-info button {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+h2 {color: #f7f7f7;}
+
+#project-details {
+  position: relative;
+  width: 100%;
+  margin-top: 5%;
+  /* border: 1px solid white; */
+}
+ul {
+  width: 100%;
+  margin: 25px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: 1px solid white;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 5% 95%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  border: 1px solid #c5c4c455;
+}
+li img{
+  width: 100%;
+}
+li section {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+}
+#project-name {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 5px 10px 15px;
+  border-bottom: 1px solid #a5a5a577;
+}
+#project-name button{
+  position: absolute;
+  padding: 5px 10px;
+  font-weight: 900;
+  right: 5%;
+}
+#project-metadata {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  display: grid;
+  font-size: small;
+  padding-left: 15px;
+  align-items: center;
+  grid-template-columns: 70% 30%;
+}
+#project-metadata span {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+#modified-date{
+  position: absolute;
+  right: 5%;
+}
+#visibility {
+  border-radius: 7px;
+  padding: 2px 15px;
+  border: 1px solid #a5a5a555;
+  background-color: #292727;
+}
+#repo-fetchbtn {
+  height: 30px;
+  width: auto;
+  background-color: #213547;
+  color: #f7f7f7;
+}
+#no-project-msg {
+  display: flex;
+  font-size: 0.8em;
+}
+.rotating {
+  animation: rotate360 1s linear infinite;
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* --------------------------------------------------------------- */
